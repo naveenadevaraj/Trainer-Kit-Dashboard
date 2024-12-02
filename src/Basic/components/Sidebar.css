@@ -1,0 +1,91 @@
+/* Sidebar container */
+.sidebar {
+    height: 100vh;
+    width: 120px; /* Slightly increased sidebar width */
+    background-color: #09006F; /* Subtle purple-blue gradient */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: all 0.3s ease;
+  }
+  
+  /* Sidebar header */
+  .sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .sidebar-icon {
+    color: #fff; /* White icon color */
+    font-size: 2rem; /* Adjusted icon size */
+  }
+  
+  .sidebar-title {
+    color: #fff;
+    font-size: 1.2rem; /* Reduced size for better fit */
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  /* Sidebar menu */
+  .sidebar-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    gap: 20px;
+  }
+  
+  .menu-link {
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack icon and text */
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .menu-item {
+    width: 100%;
+    height: 80px; /* Slightly taller height */
+    display: flex;
+    flex-direction: column; /* Stack icon and text */
+    align-items: center;
+    justify-content: center;
+    color: #8F00FF; /* Light purple text */
+    transition: all 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    border-radius: 10px;
+    width: 70%;
+    background: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+    color: #fff;
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .menu-icon {
+    font-size: 1.5rem; /* Increased icon size */
+  }
+  
+  .menu-name {
+    font-size: 1rem; /* Small text below icon */
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  /* Active menu item */
+  .menu-item-active {
+    border-radius: 10px;
+    width: 70%;
+    background: #8F00FF; /* Brighter semi-transparent active state */
+    color: #fff;
+  }
+  

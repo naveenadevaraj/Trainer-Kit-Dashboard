@@ -1,0 +1,258 @@
+/* styles.css */
+:root {
+  /* Enhanced Color Palette */
+  --color-primary: #4338CA;       /* Deep Indigo */
+  --color-primary-light: #6366F1; /* Lighter Indigo */
+  --color-secondary: #7C3AED;     /* Rich Purple */
+  --color-secondary-light: #A855F7; /* Vibrant Lavender */
+  
+  /* Background Gradient */
+  --color-background-start: #E8EAFF;  /* Soft Pastel Blue */
+  --color-background-end: #F3E8FF;    /* Soft Pastel Lavender */
+  
+  /* Text Colors */
+  --color-text-dark: #312E81;         /* Deep Indigo Blue */
+  --color-text-primary: #4338CA;      /* Indigo */
+  --color-text-secondary: #7C3AED;    /* Purple */
+  
+  /* Neutral Colors */
+  --color-white: #FFFFFF;
+  --color-gray-light: #F7F1FF;        /* Very Light Lavender */
+  --color-gray-medium: #E0E0E0;       /* Soft Gray */
+  
+  /* Status Colors */
+  --color-success: #10B981;           /* Emerald Green */
+  --color-error: #EF4444;             /* Bright Red */
+}
+.basic{
+  margin-left: 120px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--color-background-start), var(--color-background-end));
+}
+.container {  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.content {
+    max-width: 1300px;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+}
+
+.floating-card {
+  background: var(--color-gray-light);
+  color: var(--color-text-dark);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 10px rgba(67, 56, 202, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.floating-card:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(to right, var(--color-gray-light), var(--color-background-end));
+    box-shadow: 0 25px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    line-height: 1.5;
+    font-size: 1.5rem;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .floating-card {
+        padding: 2.5rem;
+        margin: 1.5rem;
+    }
+
+    .card-content {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .sensors-actuators-container {
+    padding: 3rem;
+    background-color: linear-gradient(to right, #80b9f7, #a0bff9);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 50px;
+  }
+  
+  .sensor-section,
+.actuator-section {
+  width: 50%;
+  background: #F7F1FF;
+  border-radius: 10px;
+  padding: 50px;
+  max-height: 500px; /* Fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.sensor-section::-webkit-scrollbar,
+.actuator-section::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers (Chrome, Safari) */
+}
+
+  
+  .sensor-section h2,
+  .actuator-section h2 {
+    font-size: 1.5rem;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+  
+  .status-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+  
+  .status-table th {
+    color: white;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .status-table td {
+    font-size: 1.2rem;
+    color: black;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .status-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .status-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: auto;
+  }
+  
+  .status-circle.status-active {
+    background-color:green;
+    box-shadow: 0 0 10px  #11bd0e;
+  }
+  
+  .status-circle.status-inactive {
+    background-color: rgb(207, 20, 20);
+    box-shadow: 0 0 10px #ce2525;
+  }
+  
+  /* Add this to the existing .status-table tr */
+.status-table tr:hover {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Light box shadow on hover */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+
+  .dialog-box {
+    margin-left: 50px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, var(--color-background-start), var(--color-background-end));
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    min-width: 800px;
+    color: black;
+  }
+  
+  .dialog-content {
+    text-align: center;
+  }
+  
+  .dialog-content button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: black;
+}
+  .dialog-content button:hover {
+    background-color: #2563eb;
+  }
+
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sensors-actuators-container {
+      flex-direction: column;
+    }
+    
+    .sensor-section,
+    .actuator-section {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }

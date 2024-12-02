@@ -1,0 +1,113 @@
+/* Login.css */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .login-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .login-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .login-input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .left-aligned {
+    align-items: flex-start;
+  }
+  
+  .login-input-label {
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .login-input-field {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .login-input-field:focus {
+    outline: none;
+    border-color: blue;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  }
+  
+  .login-button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .login-button {
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #3182ce;
+  }
+  .login-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.4);
+  }
+  
+  .login-button:active {
+    background-color: #4299e1;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 480px) {
+    .login-box {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .login-input-field {
+      padding: 10px 12px;
+    }
+  
+    .login-button {
+      padding: 10px 20px;
+    }
+  }
