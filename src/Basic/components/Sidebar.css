@@ -59,7 +59,7 @@
     flex-direction: column; /* Stack icon and text */
     align-items: center;
     justify-content: center;
-    color: #8F00FF; /* Light purple text */
+    color: whitesmoke; /* Light purple text */
     transition: all 0.3s ease;
   }
   
@@ -89,3 +89,8 @@
     color: #fff;
   }
   
+  /* Ensure consistent hover effects for menu-link */
+.menu-link:hover {
+  text-decoration: none; /* No underline on hover */
+}
+
